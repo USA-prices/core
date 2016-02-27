@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "4"
+addons:
+  mongodb: "3.2"
+services:
+  - mongodb
+notifications:
+  email: false

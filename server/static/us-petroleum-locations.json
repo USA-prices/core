@@ -1,0 +1,10 @@
+[
+    {"name":"PADD1A", "req_code":"PET.EMM_EPM0_PTE_R1X_DPG.W"},
+    {"name":"PADD1B", "req_code":"PET.EMM_EPM0_PTE_R1Y_DPG.W"},
+    {"name":"PADD1C", "req_code":"PET.EMM_EPM0_PTE_R1Z_DPG.W"},
+    {"name":"PADD1C", "req_code":"PET.EMM_EPM0_PTE_R1Z_DPG.W"},
+    {"name":"PADD2", "req_code":"PET.EMM_EPM0_PTE_R20_DPG.W"},
+    {"name":"PADD3", "req_code":"PET.EMM_EPM0_PTE_R30_DPG.W"},
+    {"name":"PADD4", "req_code":"PET.EMM_EPM0_PTE_R40_DPG.W"},
+    {"name":"PADD5", "req_code":"PET.EMM_EPM0_PTE_R50_DPG.W"}
+]
