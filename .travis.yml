@@ -1,9 +1,10 @@
 language: node_js
 node_js:
   - "4"
-addons:
-  mongodb: "3.2"
 services:
   - mongodb
+before_script:
+  - mongo mydb_test --eval 'db.addUser("travis", "test");'
+script: "npm install"
 notifications:
   email: false
