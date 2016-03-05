@@ -3,6 +3,8 @@ node_js:
   - "4"
 services:
   - mongodb
+env:
+  - DB_NAME=us_prices
 before_script:
   - sudo /etc/init.d/mongod start
 script: "npm install & npm test"
