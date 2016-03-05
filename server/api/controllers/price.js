@@ -2,16 +2,18 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-const Area = require('./../models/area');
 const responseHelper = require('./../../helpers/response');
+const PetroleumPrice = require('./../models/petroleum-prices');
 const router = express.Router();
 
 mongoose.Promise = Promise;
 
-router.route('/get-areas')
+router.route('/get-price')
 	.get(function(req, res) {
-		Area.find()
-			.then(items => responseHelper.responseOk.call(res, items))
+		let area = req.query.area;
+
+		PetroleumPrice.find({area: area})
+			.then(list => responseHelper.responseOk.call(res, list))
 			.catch(err => responseHelper.responseError.call(res, err));
 	});
 

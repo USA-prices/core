@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const responseHelper = require('./../../helpers/response');
 const router = express.Router();
 
 router.use(function(req, res, next) {
@@ -9,11 +10,11 @@ router.use(function(req, res, next) {
 	next();
 });
 
-router.use(require('./get-price'));
+router.use(require('./price'));
 router.use(require('./area'));
 
 router.get('/', function(req, res) {
-	res.json({ message: 'Welcome to our api!' });
+	responseHelper.responseMessage.call(res);
 });
 
 module.exports = router;

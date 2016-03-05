@@ -15,8 +15,8 @@
     "generate:areas": "mongoimport --db ${DB_NAME} --collection areas --drop --file server/static/us-states-json-array.json --jsonArray",
     "generate:petroleum:areas": "mongoimport --db ${DB_NAME} --collection petroleumlocations --drop --file server/static/us-states-json-array.json --jsonArray",
     "grub:data": "node server/static/grub-data.js",
-    "1test": "bash test.sh",
-    "start": "node_modules/.bin/brunch watch --server"
+    "start": "node_modules/.bin/brunch watch --server",
+    "test": "make test"
   },
   "dependencies": {
     "brunch": "2.3.2",
@@ -39,5 +39,12 @@
     "shortid": "~2.2.4",
     "underscore": "~1.8.3",
     "dotenv": "~2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.4.5",
+    "chai": "~3.5.0",
+    "istanbul": "~0.4.2",
+    "superagent": "~1.7.2",
+    "coveralls": "~2.11.6"
   }
 }

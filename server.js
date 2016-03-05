@@ -1,1 +1,1 @@
-exports.startServer = require('./server/server.js');
+exports.startServer = new require('./server/server.js')().start;

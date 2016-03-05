@@ -3,7 +3,11 @@
 const mongoose = require('mongoose');
 const config = require('./config');
 
-function connect(options) {
+/**
+ * Connects to db
+ * @return {Object}
+ */
+function connect() {
 	mongoose.connect(config.db);
 
 	const db = mongoose.connection;
@@ -13,14 +17,18 @@ function connect(options) {
 	});
 
 	db.once('open', function callback () {
-		console.log("Connected to DB!");
+		console.log('Connected to DB!');
 	});
 
 	return mongoose;
 }
 
-function disconnect(mongoose) {
-	mongoose.connection.close();
+/**
+ * Disconnects from db
+ * @param {Object} dbConnection
+ */
+function disconnect(dbConnection) {
+	dbConnection.connection.close();
 }
 
 module.exports = {

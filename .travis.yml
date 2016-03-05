@@ -4,7 +4,9 @@ node_js:
 services:
   - mongodb
 before_script:
-  - mongo mydb_test --eval 'db.addUser("travis", "test");'
-script: "npm install"
+  - sudo /etc/init.d/mongod start
+script: "npm install & npm test"
+after_script:
+  - cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 notifications:
   email: false
