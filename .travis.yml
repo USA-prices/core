@@ -6,7 +6,7 @@ services:
 env:
   - DB_NAME=us_prices
 before_script:
-  - sudo /etc/init.d/mongod start
+  - mongod
 script: "npm install & npm test"
 after_script:
   - cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
