@@ -8,7 +8,7 @@ const router = express.Router();
 
 mongoose.Promise = Promise;
 
-router.route('/get-areas')
+router.route('/areas')
 	.get(function(req, res) {
 		Area.find()
 			.then(items => responseHelper.responseOk.call(res, items))

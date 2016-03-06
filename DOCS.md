@@ -1,9 +1,9 @@
 # Docs
 
 ##Get areas
-- Url - `/api/area`
-- Type - `get`
+- Url - `/api/areas`
+- Type - `GET`
 
 ##Get price
-- Url - `/api/get-price?area=area_id`
-- Type - `get`
+- Url - `/api/price?area=area_id`
+- Type - `GET`
