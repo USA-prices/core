@@ -8,7 +8,7 @@ const router = express.Router();
 
 mongoose.Promise = Promise;
 
-router.route('/get-price')
+router.route('/price')
 	.get(function(req, res) {
 		let area = req.query.area;
 
